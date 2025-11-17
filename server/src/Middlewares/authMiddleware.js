@@ -18,13 +18,6 @@
             return res.status(401).json({ message: "Invalid or Expired Token" });
         }
     }
-
-    // export const authorizeRoles = (...roles)=>{
-    //     if(!roles.includes(req.user.role)){
-    //         return res.status(403).json({message:"Unauthorized Role"})
-    //     }
-    //     next()
-    // }
     export const authorizeRoles = (...roles)=>{
         
         return (req, res, next) => {

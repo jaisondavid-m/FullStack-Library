@@ -7,11 +7,14 @@ import Register from '../Pages/Register/Register'
 import { ProtectedRoutes } from '../components/ProtectedRoutes';
 
 function App() {
+  
+  const role = localStorage.getItem("role")
+
   return (
     <div>
        <Router>
           <Routes>
-            <Route path="/" element={<Login/>} />
+            <Route path="/" element={role === "admin" ? <AdminHome/> : role === "user" ? <UserHome/> : <Login/>} />
             <Route path="/register" element={<Register />} />
             {/* ProtectedRoutes */}
             <Route path="/admin" element={
