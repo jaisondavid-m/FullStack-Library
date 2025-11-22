@@ -43,7 +43,6 @@ function Login() {
             <Link to="/register" className='text-purple-950 font-bold underline'>Create an Account</Link>
           </div>
         </div>
-       
     </div>
   )
 }
